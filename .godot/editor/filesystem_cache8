@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1789645105
+a3cac16d-6413-48d2-9b2b-9b97f418151d-kopi.png::CompressedTexture2D::5793790161919442890::1789041802::1789645106::1::::<><>::
+block_shape.tres::RectangleShape2D::7524081230388780952::1789644495::0::1::::<><>::
+character_body_2d.gd::GDScript::-1::1789035503::0::1::::<>CharacterBody2D<>::
+e2f3d97e-a14d-4b2f-a705-fd887bc82a42.png::CompressedTexture2D::8646400140130046665::1780573805::1789645106::1::::<><>::
+icon.svg::CompressedTexture2D::1793454705949371666::1780572253::1789645106::1::::<><>::
+main.tscn::PackedScene::3235151886713678351::1789644908::0::1::::<><>::res://character_body_2d.gd<>uid://0s064fccocle::::res://icon.svg<>uid://cc0v4jj4ga748::::res://marioSmol.tres<>uid://yjlb1bddk24d::::res://new_tile_set.tres<>res://tile_map.gd
+marioSmol.tres::SpriteFrames::4966155831324173371::1789643498::0::1::::<><>::uid://dvgm7g18d4o0h::::res://e2f3d97e-a14d-4b2f-a705-fd887bc82a42.png
+new_tile_set.tres::TileSet::1703782687106299881::1789643759::0::1::::<><>::uid://coss43mu0274i::::res://a3cac16d-6413-48d2-9b2b-9b97f418151d-kopi.png
+SpecialBrick.gd::GDScript::-1::1789644688::0::1::::SpecialBrick<>StaticBody2D<>::
+tile_map.gd::GDScript::-1::1789643770::0::1::::<>TileMap<>::
+::res://tilesprites-kopi/::1789644630
+sprite_brick_brick.png::CompressedTexture2D::5396551345570785011::1789041139::1789645106::1::::<><>::
+sprite_brick_mystery.png::CompressedTexture2D::3577829664709724622::1789041139::1789645106::1::::<><>::
+sprite_coin.png::CompressedTexture2D::464011595698243215::1789041139::1789645106::1::::<><>::
