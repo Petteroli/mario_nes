@@ -15,7 +15,9 @@ func _ready() -> void:
 		if special_data == SPECIAL_EMPTY_NULL: continue
 		
 		if special_data == SPECIAL_EMPTY_COIN:
-			pass; #var new_coin = SpecialCoin.new()
+			var new_tile = Coin.new()
+			add_child(new_tile)
+			new_tile.global_position = tile_pos * TILE_SCALE
 		else:
 			var new_tile = SpecialBrick.new()
 			new_tile.define(special_data, self, tile_pos)

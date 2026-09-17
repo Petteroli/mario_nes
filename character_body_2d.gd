@@ -17,6 +17,7 @@ extends CharacterBody2D
 @export var min_turncancelspeed: float
 
 @export var ground_area: Area2D
+@export var collision_area: Area2D
 
 @export var animation: AnimatedSprite2D
 @export var scl_anim_speed: float
@@ -60,6 +61,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Right"):
 		input_direction += 1.0
 	move(input_direction, Input.is_action_pressed("Run"), Input.is_action_just_pressed("Jump"), Input.is_action_pressed("Jump"))
+	check_collisions()
 	animation_movement()
 	move_and_slide()
 	globalposition_actual = global_position
@@ -124,8 +126,8 @@ func move(_direction: float, _is_running: bool, _jumped: bool, _is_jumping: bool
 				
 	if abs(velocity.x) < min_velocity:
 		velocity.x = 0
-		
-
+			
+			
 func check_grounded():
 	is_grounded = false
 	for _body in ground_area.get_overlapping_bodies():
@@ -149,11 +151,24 @@ func animation_movement():
 	
 	animation.play("jumping", abs(velocity.x) * scl_anim_speed, true)
 	
+	
+	
+func check_collisions():
+	for _body in collision_area.get_overlapping_bodies():
+		if _body is Coin:
+			_body.collect()
+			
+			
+			
+			
+			
 func debug_actions():
 	if Input.is_action_pressed("reset"):
 		global_position = debug_startposition
 		velocity.x = 0
 		velocity.y = 0
+
+
 	
 	
 	

@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmdeqjvgdulxf"]
+[gd_scene load_steps=10 format=3 uid="uid://bmdeqjvgdulxf"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_gthpr"]
 [ext_resource type="Texture2D" uid="uid://0s064fccocle" path="res://icon.svg" id="1_la4k1"]
 [ext_resource type="SpriteFrames" uid="uid://cc0v4jj4ga748" path="res://marioSmol.tres" id="2_buagv"]
+[ext_resource type="Script" path="res://felt_cute_might_delete_later.gd" id="4_av54f"]
 [ext_resource type="TileSet" uid="uid://yjlb1bddk24d" path="res://new_tile_set.tres" id="4_cgh03"]
 [ext_resource type="Script" path="res://tile_map.gd" id="5_5mhul"]
 
@@ -22,24 +23,12 @@ position = Vector2(33, -45)
 scale = Vector2(32.5, 1)
 texture = ExtResource("1_la4k1")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("ground_area", "animation")]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("ground_area", "collision_area", "animation")]
 rotation = -0.036647
 script = ExtResource("1_gthpr")
-acc_gravity = 15.0
-acc_walk = 6.0
-acc_run = 10.0
-frx_air_run = 0.3
-dur_jump = 10
-acc_jump = 28.0
-fce_jump = 96.0
-frx_ground = 0.95
-frx_air = 0.9
-frx_turn = 0.95
-cap_speed = 200.0
-min_turncancelspeed = 16.0
 ground_area = NodePath("GroundArea")
+collision_area = NodePath("CollisionArea")
 animation = NodePath("AnimatedSprite2D")
-scl_anim_speed = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, -7)
@@ -56,8 +45,16 @@ position = Vector2(0, -32)
 zoom = Vector2(4, 4)
 
 [node name="GroundArea" type="Area2D" parent="CharacterBody2D"]
+script = ExtResource("4_av54f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/GroundArea"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_i2l60")
+
+[node name="CollisionArea" type="Area2D" parent="CharacterBody2D"]
+script = ExtResource("4_av54f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/CollisionArea"]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_i2l60")
 

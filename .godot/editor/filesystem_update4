@@ -1,3 +1,8 @@
 res://main.tscn
 res://marioSmol.tres
 res://new_tile_set.tres
+res://Coin.gd
+res://coin_shape.tres
+res://tile_map.gd
+res://felt_cute_might_delete_later.gd
+res://character_body_2d.gd
