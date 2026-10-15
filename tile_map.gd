@@ -1,10 +1,8 @@
 extends TileMap
 
 
-
 const SPECIAL_EMPTY_NULL = 0
 const SPECIAL_EMPTY_COIN = 2
-const TILE_SCALE = 16.0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,12 +15,12 @@ func _ready() -> void:
 		if special_data == SPECIAL_EMPTY_COIN:
 			var new_tile = Coin.new()
 			add_child(new_tile)
-			new_tile.global_position = tile_pos * TILE_SCALE
+			new_tile.global_position += tile_pos * SpecialBrick.TILE_SCALE
 		else:
 			var new_tile = SpecialBrick.new()
 			new_tile.define(special_data, self, tile_pos)
 			add_child(new_tile)
-			new_tile.global_position = tile_pos * TILE_SCALE
+			new_tile.global_position += tile_pos * SpecialBrick.TILE_SCALE
 		
 		set_cell(0, tile_pos, -1)
 			

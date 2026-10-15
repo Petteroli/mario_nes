@@ -1,9 +1,9 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://yjlb1bddk24d"]
+[gd_resource type="TileSet" format=3 uid="uid://yjlb1bddk24d"]
 
-[ext_resource type="Texture2D" uid="uid://coss43mu0274i" path="res://a3cac16d-6413-48d2-9b2b-9b97f418151d-kopi.png" id="1_psmrd"]
+[ext_resource type="Texture2D" uid="uid://coss43mu0274i" path="res://tile_set_full.png" id="1_e3020"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uco2q"]
-texture = ExtResource("1_psmrd")
+texture = ExtResource("1_e3020")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0

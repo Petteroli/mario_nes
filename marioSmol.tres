@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://cc0v4jj4ga748"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://cc0v4jj4ga748"]
 
 [ext_resource type="Texture2D" uid="uid://dvgm7g18d4o0h" path="res://e2f3d97e-a14d-4b2f-a705-fd887bc82a42.png" id="1_183cc"]
 
@@ -36,7 +36,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_munay")
 }],
-"loop": true,
+"loop": 1,
 "name": &"dying",
 "speed": 5.0
 }, {
@@ -44,7 +44,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q2m7q")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 1.0
 }, {
@@ -52,7 +52,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_coqd4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jumping",
 "speed": 1.0
 }, {
@@ -60,7 +60,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vw7fo")
 }],
-"loop": true,
+"loop": 1,
 "name": &"turning",
 "speed": 0.0
 }, {
@@ -74,7 +74,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p2c2i")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walking",
 "speed": 1.0
 }]
